@@ -8,7 +8,10 @@ export class LightButton extends WatchButton{
     }
 
     press(ev: MouseEvent,w: Watch) {
-        if(w.watchElement.style.color == 'red'){
+        if(w.watchElement.style.color == 'black'){
+            w.watchElement.style.color = 'blue';
+        }
+        else {
             w.watchElement.style.color = 'black';
         }
     }
