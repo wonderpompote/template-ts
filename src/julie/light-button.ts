@@ -8,11 +8,11 @@ export class LightButton extends WatchButton{
     }
 
     press(ev: MouseEvent,w: Watch) {
-        if(w.watchElement.style.color == 'black'){
-            w.watchElement.style.color = 'blue';
+        if(w.watchElement.style.color == 'black'){ // if watch not in "night mode"
+            w.watchElement.style.color = 'blue'; // display current time in blue
         }
-        else {
-            w.watchElement.style.color = 'black';
+        else { // if watch already in "night mode"
+            w.watchElement.style.color = 'black'; // display current time in default color
         }
     }
 }

@@ -11,10 +11,6 @@ export class ModeButton extends WatchButton {
     }
 
     press(ev: MouseEvent, w: Watch) {
-        this.nbPress = (this.nbPress + 1) % 3;
-    }
-
-    press_me(){
-        console.log("press mode button");
+        this.nbPress = (this.nbPress + 1) % 3; // each time button pressed, add 1 modulo 3 to nbPress
     }
 }

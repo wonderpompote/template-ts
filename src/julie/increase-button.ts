@@ -10,11 +10,11 @@ export class IncreaseButton extends WatchButton {
 
     press(ev: MouseEvent, w: Watch) {
         var modeButton = w.buttons["modeButton"] as ModeButton;
-        if(modeButton.nbPress == 1){
-            w.addHours ++;
+        if(modeButton.nbPress == 1){ // if mode button pressed once
+            w.addHours ++; // add 1 hour
         }
-        else if(modeButton.nbPress == 2){
-            w.addMinutes ++;
+        else if(modeButton.nbPress == 2){ // if mode button pressed twice
+            w.addMinutes ++; // add 1 minute
         }
     }
 }
