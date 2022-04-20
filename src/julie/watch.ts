@@ -40,8 +40,14 @@ export class Watch {
         var minutes = ((this.currentTime.getMinutes()+this.addMinutes) % 60).toString(); // current minute + potential increase (modulo 60)
         var seconds = this.currentTime.getSeconds().toString();
 
-        var clockToString = hours + ":" + minutes + ":" + seconds;
-        this.watchElement.textContent = clockToString;
+        if(hours.length < 2){ // if hours only has 1 number --> add 0 in front
+            hours = '0'+hours;
+        }
+        if(minutes.length < 2){ // if minutes only has 1 number --> add 0 in front
+            minutes = '0'+minutes;
+        }
+
+        this.watchElement.textContent = hours + ":" + minutes + ":" + seconds;
     }
 
 }
