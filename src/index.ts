@@ -1,5 +1,9 @@
 import './index.css';
-import { MyClass } from './example-unit';
+import { Watch, LightButton, ModeButton, IncreaseButton } from './julie';
 
-const a = new MyClass(2);
-console.log('number is', a.get());
+
+var modeButton = new ModeButton(document.getElementById('modeButton'));
+var increaseButton = new IncreaseButton(document.getElementById('incButton'));
+var lightButton = new LightButton(document.getElementById('lightButton'));
+
+var watch = new Watch(document.getElementById('watch'), modeButton, increaseButton, lightButton);
