@@ -7,10 +7,7 @@ export class Watch {
 
     watchElement: HTMLElement;
     currentTime: Date;
-    buttons: { [buttonKey: string]: WatchButton};
-    lightButton: LightButton;
-    modeButton: ModeButton;
-    increaseButton: IncreaseButton;
+    buttons: { [buttonKey: string]: WatchButton };
     addHours: number;
     addMinutes: number;
 
@@ -46,7 +43,7 @@ export class Watch {
         if(minutes.length < 2){ // if minutes only has 1 number --> add 0 in front
             minutes = '0'+minutes;
         }
-
+        // display time in HTML Element
         this.watchElement.textContent = hours + ":" + minutes + ":" + seconds;
     }
 
