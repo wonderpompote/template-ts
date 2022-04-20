@@ -14,7 +14,7 @@ export class Watch {
     constructor(el: HTMLElement, mButton: ModeButton, iButton: IncreaseButton, lButton: IncreaseButton) {
         this.watchElement = el;
         this.currentTime = new Date();
-        setInterval(() => this.displayTime(), 1000); // execute displayTime every second
+        setInterval(() => this.displayTime(), 500); // execute displayTime every half second
         this.buttons = { 
             modeButton: mButton as ModeButton, 
             increaseButton: iButton as IncreaseButton, 
